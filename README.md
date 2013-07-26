@@ -13,5 +13,10 @@ Acquire will send control header and data packets over TCP.
 
 Need front end for OpenViBE or alternative BCI software (Unlock Project)
 
+Started with basic python server client using socket library
+
+see: 'client.py'
+     'server.py'
+
 
 
