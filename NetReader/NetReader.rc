@@ -1,0 +1,148 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\NetReader.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\NetReader.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NETREADER_DIALOG DIALOGEX 0, 0, 411, 326
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Neuroscan NetReader Client Example"
+FONT 10, "Times New Roman"
+BEGIN
+    DEFPUSHBUTTON   "Connect",IDC_START,353,2,54,12
+    CTEXT           "Server Name",IDC_STATIC,4,2,55,12,SS_SUNKEN
+    EDITTEXT        IDC_SERVER_NAME,4,15,55,12,ES_AUTOHSCROLL
+    CTEXT           "Port",IDC_STATIC,59,2,27,12,SS_SUNKEN
+    EDITTEXT        IDC_SERVER_PORT,59,15,27,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_STATUS,190,15,161,12,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Status",IDC_STATIC,190,2,161,12,SS_SUNKEN
+    CTEXT           "Duration(sec)",IDC_STATIC,86,2,51,12,SS_SUNKEN
+    EDITTEXT        IDC_DURATION,86,15,41,12,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Scale(uV/chan)",IDC_STATIC,138,2,51,12,SS_SUNKEN
+    EDITTEXT        IDC_SCALE,138,15,41,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_SCALE_SPIN,"msctls_updown32",UDS_ARROWKEYS,
+                    179,15,10,12
+    CONTROL         "Save",IDC_SAVE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_DISABLED | WS_TABSTOP,353,15,54,12
+    EDITTEXT        IDC_INSTRUCTION,4,30,404,294,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_DUR_SPIN,"msctls_updown32",UDS_ARROWKEYS,127,
+                    15,10,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_NETREADER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 404
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\NetReader.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

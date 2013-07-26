@@ -1,0 +1,60 @@
+; Rainbow Technologies Sentinel SuperPro USB driver INF file
+;
+; Copyright (C) 2002 Rainbow Technologies, All rights reserved.
+
+[Version]
+Signature="$CHICAGO$"
+Class=USB
+ClassGuid={36fc9e60-c465-11cf-8056-444553540000}
+CatalogFile=sntnlusb.cat
+provider=%Rainbow%
+DriverVer=07/23/2002, 5.41.0.0
+
+[Manufacturer]
+%Rainbow%=Rainbow
+
+[Rainbow]
+%USB\VID_04B9&PID_0300.DeviceDesc%=SNTNLUSB, USB\VID_04B9&PID_0300
+
+[SourceDisksNames]
+1=%DiskName%,,,
+
+[SourceDisksFiles]
+SNTNLUSB.SYS=1,,
+
+[ControlFlags]
+; All PnP devices should be excluded from manual AddDevice Applet list
+ExcludeFromSelect.NTx86 = USB\VID_04B9&PID_0300
+
+[DestinationDirs]
+DefaultDestDir = 12
+SNTNLUSB.SysCopy = 10,System32\Drivers
+
+[SNTNLUSB.NTx86]
+CopyFiles=SNTNLUSB.SysCopy
+
+[SNTNLUSB.SysCopy]
+SNTNLUSB.SYS
+
+[SNTNLUSB.NTx86.Services]
+Addservice = SNTNLUSB, 0x00000002, SNTNLUSB.AddService
+
+[SNTNLUSB.AddService]
+DisplayName    = %SNTNLUSB.SvcDesc%
+ServiceType    = 1 ; SERVICE_KERNEL_DRIVER
+StartType      = 3 ; SERVICE_DEMAND_START
+ErrorControl   = 1 ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\SNTNLUSB.SYS
+AddReg         = SNTNLUSB.AddReg.NTx86
+LoadOrderGroup = Base
+
+[SNTNLUSB.AddReg.NTx86]
+HKR,"Setup","UsbSupport",0x10001,1
+HKR,"Current","VersionString",,"SSD5.41.0"
+
+[Strings]
+Rainbow="Rainbow Technologies, Inc."
+DisplayClassName="Software Security Token"
+USB\VID_04B9&PID_0300.DeviceDesc="Rainbow USB SuperPro"
+SNTNLUSB.SvcDesc="Rainbow USB SuperPro"
+DiskName="Sentinel System Driver Installation Disk"
